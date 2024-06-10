@@ -1,9 +1,23 @@
 @charset "utf-8";
 
+nav.floating {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background-color: #d0d0d0;
+    }
+
+nav.floating {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background-color: #d0d0d0;
+}
+
 .first-view {
     height: calc(100vh - 110px);
     background-image: url(../images/index/bg_main.jpg);
-    background-repeat: no-reoeat;
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     display: flex;
@@ -15,15 +29,15 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 40px;
+    padding-left: 40ox;
     padding-bottom: 80px;
     color: #ffffff;
     font-weight: bold;
     text-shadow: 1px 1px 10px #4b2c14;
 }
 
-.first-view-text hl {
-    font-family: 'Montserrat', sans-serif;
+.first-view-text h1 {
+    font-family: "Montserrat", sans-serif;
     font-size: 56px;
     line-height: 72px;
 }
@@ -51,7 +65,7 @@ ul, ol {
 }
 
 a {
-    color: inherit; 
+    color: inherit;
     text-decoration: none;
 }
 
@@ -79,33 +93,30 @@ img {
     align-items: center;
 }
 
-.toggle-menu-button{
+.toggle-menu-button {
     display: none;
 }
 
-.header-logo{
+.header-logo {
     display: block;
     width: 170px;
 }
 
-.site-menu ul{
+.site-menu ul {
     display: flex;
 }
 
-.site-menu ul li{
+.site-menu ul li {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.site-menu ul li a{
-  font-family: "Noto Serif JP", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.site-menu ul li a {
+    font-family: 'Cherry Bomb One', cursive;
 }
 
 @media (max-width: 800px) {
-    .site-menu ul{
+    .site-menu ul {
         display: block;
         text-align: center;
     }
@@ -129,6 +140,23 @@ img {
         padding-left: 20px;
         padding-right: 20px;
         height: 100%;
+        position: relative;
+    }
+
+    .header-site-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: #ffffff;
+        background-color: #736e62;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        display: none;
+    }
+
+    .header-site-menu.is-show {
+        display: block;
     }
 
     .header-logo {
@@ -136,7 +164,7 @@ img {
     }
 
     .main {
-        padding-top: 50px;
+        padding-top: 50px;;
     }
 
     .footer-logo {
@@ -146,25 +174,39 @@ img {
     .copyright {
         margin-top: 50px;
     }
+
+    .toggle-menu-button {
+        display: block;
+        width: 44px;
+        height: 34px;
+        background-image: url(../images/common/icon-menu.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
 }
 .footer {
-    color: #ffffff; /*フッターの背景を白にする*/
+    color: #ffffff;
     background-color: #24211b;
-    padding-top: 30px; /*フッターの内側上下の余白を指定*/
+    padding-top: 30px;
     padding-bottom: 15px;
-    display: flex; /*フッター内の各要素の並びを指定*/
+    display: flex;
     flex-direction: column;
-    align-items: center; /*各要素を中央に揃える*/
+    align-items: center;
 }
 
 .footer-logo {
     display: block;
     width: 235px;
-    margin-top: 90px; /*フッターロゴの余白調整*/
+    margin-top: 90px;
 }
 
 .copyright {
-    font-size: 14px;
+    font-size: 14pt;
     font-weight: bold;
     margin-top: 90px;
 }
